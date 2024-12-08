@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список доступных машин</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+            body{
+       text-align: center;
+       background: linear-gradient(#e66465, #9198e5);
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin: 0;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            margin: 10px;
+            width: 200px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card:hover {
+            transform: scale(3.0);
+            box-shadow: 0 4px 20px rgba(154,93,11,1);
+            }
+
+        @keyframes fadeIn{
+            to {
+                    opacity: 1;
+                    transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="/car1" class = "card fade">
+        <img src="cheron.jpg" alt="Car 1" width = "200" height="300">
+        <h1>Машина 1</h1>
+    </a>
+
+     <a href="/car2" class = "card fade">
+        <img src="Gaz52.jpg" alt="Car 2" width = "200" height="300">
+        <h1>Машина 2</h1>
+     </a>
+
+
+   <a href="/car3" class = "card fade">
+        <img src="lambor.jpg" alt="Car 3" width = "200" height="300">
+        <h1>Машина 3</h1>
+    </a>
+
+       <script>
+           document.querySelectorAll('.card').forEach((card, index) => {
+            card.style.animation = `fadeIn 2.0s ease forwards`;
+            card.style.animationDelay = `${index * 2.0}s`;
+        });
+       </script>
+
+</body>
+</html>
